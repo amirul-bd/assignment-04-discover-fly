@@ -47,9 +47,7 @@ document.getElementById('book-now').addEventListener('click', function () {
     if (inputFirstNumber > 0 || inputEconomyNumber > 0) {
         const booked = document.getElementById('main-section');
         booked.style.display = 'none'
-
         document.getElementById('booked-confirm').style.display = 'block'
-
     }
     else {
         alert('Please book any fare')
