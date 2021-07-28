@@ -13,7 +13,6 @@ body{
     background-attachment: scroll;
     background-size: cover;
 }
-
 nav{
     height: 50px;
     width: 100%;
@@ -69,10 +68,10 @@ nav ul li a:hover, a.active{
     margin-top: 20px;
 }
  .btn{
-    font-weight: 400;
+    font-weight: 700;
     cursor: pointer;;
     background-color: transparent;
-    border: 1px solid transparent;
+    border: 0;
     padding: .375rem .5rem;
     font-size: 1rem;
     color: #3352F2;
@@ -110,7 +109,6 @@ nav ul li a:hover, a.active{
     font-weight: 400;
     margin-bottom: 25px;
 }
-
 .btn-style{
     display: block;
     width: 100%;
@@ -127,12 +125,14 @@ nav ul li a:hover, a.active{
 }
 
 
-#booked-confirm{
+#booking-confirm{
     display: none;
-    color: white;
-    font-size: 25px;
-    background: #000;
+    color: green;
+    font-size: 1.80rem;
+    background: white;
     width: 50%;
     margin-top: 50px;
-
+    padding:10px;
+    font-weight: bold;
+    border-radius: 5px;
 }

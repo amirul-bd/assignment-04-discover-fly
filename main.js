@@ -1,20 +1,19 @@
-//
+// update first class, economy class value & total function
 function updateProductChange(isIncrease, product) {
-    const firstClass = document.getElementById('input-' + product)
-    let firstClassNumber = parseInt(firstClass.value);
-    firstClassNumber = firstClassNumber;
+    let classFareNumber = getInputValue(product);
+    // classFareNumber = classFareNumber + 1;
     if (isIncrease == true) {
-        firstClassNumber = firstClassNumber + 1;
+        classFareNumber = classFareNumber + 1;
     }
-    if (isIncrease == false && firstClassNumber > 0) {
-        firstClassNumber = firstClassNumber - 1;
+    if (isIncrease == false && classFareNumber > 0) {
+        classFareNumber = classFareNumber - 1;
     }
-    document.getElementById('input-' + product).value = firstClassNumber;
+    document.getElementById('input-' + product).value = classFareNumber;
     //sub total , vat, grand total
     getGrandTotal();
 }
 
-   //sub total , vat, grand total
+//sub total , vat, grand total
 function getGrandTotal() {
     const inputFirstNumber = getInputValue('first');
     const inputEconomyNumber = getInputValue('economy');
@@ -47,7 +46,7 @@ document.getElementById('book-now').addEventListener('click', function () {
     if (inputFirstNumber > 0 || inputEconomyNumber > 0) {
         const booked = document.getElementById('main-section');
         booked.style.display = 'none'
-        document.getElementById('booked-confirm').style.display = 'block'
+        document.getElementById('booking-confirm').style.display = 'block'
     }
     else {
         alert('Please book any fare')
