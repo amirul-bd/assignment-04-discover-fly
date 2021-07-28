@@ -39,3 +39,19 @@ function getInputValue(product) {
 }
 
 
+//Book now button click
+document.getElementById('book-now').addEventListener('click', function () {
+    const inputFirstNumber = getInputValue('first');
+    const inputEconomyNumber = getInputValue('economy');
+
+    if (inputFirstNumber > 0 || inputEconomyNumber > 0) {
+        const booked = document.getElementById('main-section');
+        booked.style.display = 'none'
+
+        document.getElementById('booked-confirm').style.display = 'block'
+
+    }
+    else {
+        alert('Please book any fare')
+    }
+})
